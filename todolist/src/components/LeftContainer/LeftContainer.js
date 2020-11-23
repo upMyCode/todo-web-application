@@ -1,5 +1,6 @@
 import React from 'react';
 import AddDate from './AddDate';
+import './addDateForLeftSide.css'
 import AddPicture from './AddPicture';
 
 
