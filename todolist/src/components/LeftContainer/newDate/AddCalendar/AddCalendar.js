@@ -20,9 +20,10 @@ class AddCalendar extends Component {
     render() {
         this.addNumberOfDate();
         this.listItems = this.elem.map((item,id) => 
-        <div key={item.toString()} className = 'elem'>{id + 1}</div>
+        <div key={item.toString()} className = 'elem'>
+            <a className='elem__number'>{id + 1}</a>
+        </div>
         );
-        console.log(this.elem);
         return(
             <div className='addCalendar'>
                 {this.listItems}

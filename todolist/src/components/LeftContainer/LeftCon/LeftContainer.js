@@ -1,7 +1,8 @@
 import React from 'react';
-import AddDate from './AddDate';
+import AddDate from '../newDate/AddDate/AddDate';
 import './addDateForLeftSide.css'
-import AddPicture from './AddPicture';
+import AddPicture from '../AddPicture/AddPicture';
+
 
 
 const LeftContainer = () => {
@@ -10,9 +11,9 @@ const LeftContainer = () => {
             <div className='addDateForLeftSide'>
                 <AddDate/>
             </div>
-            {/* <div className='addPicture'>
+            <div className='addPicture'>
                 <AddPicture/>
-            </div> */}
+            </div>
         </>
     )
 }

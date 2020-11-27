@@ -1,5 +1,5 @@
 import React from 'react';
-import LeftContainer from '../LeftContainer/LeftContainer';
+import LeftContainer from '../LeftContainer/LeftCon/LeftContainer';
 import './App.css';
 
 

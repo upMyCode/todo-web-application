@@ -7,6 +7,8 @@ const AddDefaultDate = (props) => {
     let month = '';
     
     if(date.getMonth()) {
+
+        
        
         switch (date.getMonth()) {
             case 0 :  

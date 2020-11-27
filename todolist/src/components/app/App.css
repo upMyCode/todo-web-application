@@ -4,6 +4,10 @@
 }
 
 .left__container {
-    width: 693px;
-    height:  280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 693px; 
+    height:  800px;
 }

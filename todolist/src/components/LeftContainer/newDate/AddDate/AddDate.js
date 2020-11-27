@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import AddDefaultDate from './newDate/AddDefaultDate';
-import AddCalendar from './newDate/AddCalendar';
+import AddDefaultDate from '../AddDefaultDate/AddDefaultDate';
+import AddCalendar from '../AddCalendar/AddCalendar';
 
 
 
