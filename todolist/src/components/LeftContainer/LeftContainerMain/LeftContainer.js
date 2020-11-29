@@ -1,7 +1,7 @@
 import React from 'react';
-import AddDate from '../newDate/AddDate/AddDate';
-import './addDateForLeftSide.css'
-import AddPicture from '../AddPicture/AddPicture';
+import AddDate from '../LeftContainerTop/AddDate/AddDate';
+import './left-container.css'
+import AddPicture from '../LeftContainerBottom/AddPicture';
 
 
 

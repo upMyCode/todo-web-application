@@ -1,5 +1,6 @@
 import React from 'react';
-import LeftContainer from '../LeftContainer/LeftCon/LeftContainer';
+import LeftContainer from '../LeftContainer/LeftContainerMain/LeftContainer';
+import RightContainer from '../RightContainer/RightContainerMain/RightContainer';
 import './App.css';
 
 
@@ -11,7 +12,7 @@ const App = () => {
           <LeftContainer/>
       </div>
       <div className='right__container'>
-
+        <RightContainer/>
       </div>
 
     </div>

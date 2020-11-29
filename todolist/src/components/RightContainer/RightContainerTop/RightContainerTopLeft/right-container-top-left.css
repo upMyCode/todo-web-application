@@ -1,0 +1,20 @@
+.user__name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.user__life-position {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.user__favorite-song {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
