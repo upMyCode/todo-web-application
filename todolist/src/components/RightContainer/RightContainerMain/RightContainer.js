@@ -1,5 +1,6 @@
 import React from 'react';
 import RightContainerTop from '../RightContainerTop/RightContainerTop';
+import AddToDoList from '../RightContainerMiddle/RightContainerMiddle';
 import './rightcontainer.css'
 
 const RightContainer = () => {
@@ -9,7 +10,7 @@ const RightContainer = () => {
                 <RightContainerTop/>
             </div>
             <div className = 'rightcontainer__middle'>
-
+                <AddToDoList/>
             </div>
             <div className = 'rightcontainer__bottom'>
 

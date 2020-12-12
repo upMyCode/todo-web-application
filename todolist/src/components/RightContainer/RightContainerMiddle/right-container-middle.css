@@ -1,0 +1,13 @@
+.rightContainerMiddle {
+    display: flex;
+    justify-content: center;
+    margin-top: 43px;
+}
+
+
+.addToDoList {
+    width: 80%;
+    background-color: white;
+    height: 52px;
+    border-radius: 20px;
+}
