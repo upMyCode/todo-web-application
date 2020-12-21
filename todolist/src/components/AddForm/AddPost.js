@@ -16,7 +16,7 @@ class AddPost extends Component {
                     </a>
                 </div>
                 <form className='addForm'>
-                    <input class='addFormText' 
+                    <input className='addFormText' 
                             type='text'
                             placeholder='Please add your ToDo list'
                     />
