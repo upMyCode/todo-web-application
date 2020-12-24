@@ -1,67 +1,71 @@
 import React from 'react';
 import './addDefaultDate.css'
 
-const AddDefaultDate = (props) => {
-    
-    let date = props.date;
-    let month = '';
-    
-    if(date.getMonth()) {
-
-        
-       
-        switch (date.getMonth()) {
-            case 0 :  
-                month ='Января';
-                break;
-            case 1 :  
-                month ='Февраля';
-                break;
-            case 2 :  
-                month ='Марта';
-                break;
-            case 3 :  
-                month ='Апреля';
-                break;
-            case 4 :  
-                month ='Мая';
-                break;
-            case 5 :  
-                month ='Июня';
-                break;
-            case 6 :  
-                month ='Июля';
-                break;
-            case 7 :  
-                month ='Августа';
-                break;
-            case 8 :  
-                month ='Сентября';
-                break;
-            case 9 :  
-                month ='Октября';
-                break;
-            case 10 :  
-                month ='Ноября';
-                break;
-            case 11 :  
-                month ='Декабря';
-                break;
-
+class AddDefaultDate extends React.Component {
+    constructor(props){
+        super(props);
+        this.date = props.date;
+        this.month = '';
+        this.getTime = `${this.date.getHours()} : ${this.date.getMinutes()}`;
+        this.state = {
+            time: `${this.date.getHours()} : ${this.date.getMinutes()}`
         }
     }
-
-
-    return (
-        <div className = 'addDefaultDate'>
-            <div className = 'currentDate'>
-                <p>{`${date.getDate()} ${month} ${date.getFullYear()}`}</p>
+    
+    
+    render() {
+        if(this.date.getMonth()) {
+            switch (this.date.getMonth()) {
+                case 0 :  
+                    this.month ='Января';
+                    break;
+                case 1 :  
+                    this.month ='Февраля';
+                    break;
+                case 2 :  
+                    this.month ='Марта';
+                    break;
+                case 3 :  
+                    this.month ='Апреля';
+                    break;
+                case 4 :  
+                    this.month ='Мая';
+                    break;
+                case 5 :  
+                    this.month ='Июня';
+                    break;
+                case 6 :  
+                    this.month ='Июля';
+                    break;
+                case 7 :  
+                    this.month ='Августа';
+                    break;
+                case 8 :  
+                    this.month ='Сентября';
+                    break;
+                case 9 :  
+                    this.month ='Октября';
+                    break;
+                case 10 :  
+                    this.month ='Ноября';
+                    break;
+                case 11 :  
+                    this.month ='Декабря';
+                    break;
+    
+            }
+        }
+        return (
+            <div className = 'addDefaultDate'>
+                <div className = 'currentDate'>
+                    <p>{`${this.date.getDate()} ${this.month} ${this.date.getFullYear()}`}</p>
+                </div>
+                <div className = 'currentTime'>
+                    <p>{this.state.time}</p>
+                </div>
             </div>
-            <div className = 'currentTime'>
-                <p>{`${date.getHours()} : ${date.getMinutes()} `}</p>
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default AddDefaultDate;

@@ -22,17 +22,16 @@ class AddCalendar extends Component {
     
 
     getId = (e) => {
-      let idElem = e.target.id;
-      if(this.elems[idElem].important === false) { 
-          e.target.className = 'blue__elem';
+      let idElem = Number(e.target.id); 
+      if (this.elems[idElem].important === false) { 
+          this.elems[idElem].className = 'blue__elem';
           this.elems[idElem].important = true;
           this.setState({
             elem: this.elems
           })
-          console.log(this.state.elem)
         }
-        else {
-            e.target.className = 'elem'
+      else {
+            this.elems[idElem].className = 'elem'
             this.elems[idElem].important = false;
             this.setState({
             elem: this.elems
@@ -40,21 +39,20 @@ class AddCalendar extends Component {
         }
 
     }
-    render(){
-        this.addNumberOfDate()
-        this.listOfElems =  this.elems.map((item) => 
-        <div key={item.id} className='elem' important={item.important.toString()} id={item.id} onClick={this.getId} >
-            <a className='elem__number' id={item.id} >{item.number}</a>
-        </div>
-        )
-        
     
+    render(){
+        this.counter++
+        if(this.counter <= 1) {
+            this.addNumberOfDate()
+        };
+
+      
         return (
             <div className='addCalendar'>
                 {   
-                    this.elems.map((item) => 
-                    <div key={item.id} className='elem' important={item.important.toString()}  id={item.id} onClick={this.getId} >
-                         <a className='elem__number' id={item.id} >{item.number}</a>
+                    this.elems.map((item, index) => 
+                    <div key={this.state.elem[index].id} className={this.state.elem[index].className || 'elem'} important={this.state.elem[index].important.toString()}  id={this.state.elem[index].id} onClick={this.getId} >
+                         <a className='elem__number' id={this.state.elem[index].id} >{this.state.elem[index].id +1}</a>
                      </div>
                     )
                 } 
