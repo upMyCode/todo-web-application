@@ -4,14 +4,14 @@ import AddToDoList from '../RightContainerMiddle/RightContainerMiddle';
 import AddPost from '../../AddForm';
 import './rightcontainer.css'
 
-const RightContainer = () => {
+const RightContainer = (props) => {
     return (
         <div  className = 'rightcontainer'>
             <div className = 'rightcontainer__top'>
                 <RightContainerTop/>
             </div>
             <div className = 'rightcontainer__middle'>
-                <AddToDoList/>
+                <AddToDoList value = {props.value}/>
             </div>
             <div className = 'rightcontainer__bottom'>
                 {/* <AddPost/> */}

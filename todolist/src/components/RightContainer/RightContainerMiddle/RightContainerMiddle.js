@@ -6,11 +6,12 @@ class AddToDoList extends Component {
         super(props);
     }
 
+    
     render() {
         return (
             <div className='rightContainerMiddle'>
                 <div className='addToDoList'>
-
+                    <p>{this.props.value}</p>
                 </div>
             </div>
         )

@@ -14,7 +14,6 @@ const AddDate = () => {
         <>
             <div className='addDate'>
                 <AddDefaultDate 
-                    date = {new Date()}
                 />
             </div>
             <div className='addCalendar'>

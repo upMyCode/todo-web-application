@@ -4,18 +4,15 @@ import './addDefaultDate.css'
 class AddDefaultDate extends React.Component {
     constructor(props){
         super(props);
-        this.date = props.date;
         this.month = '';
-        this.getTime = `${this.date.getHours()} : ${this.date.getMinutes()}`;
         this.state = {
-            time: `${this.date.getHours()} : ${this.date.getMinutes()}`
+            time: `${new Date().getHours()} : ${new Date().getMinutes()}`
         }
     }
-    
-    
-    render() {
-        if(this.date.getMonth()) {
-            switch (this.date.getMonth()) {
+
+    setMonth = () => {
+        if(new Date().getMonth()) {
+            switch (new Date().getMonth()) {
                 case 0 :  
                     this.month ='Января';
                     break;
@@ -52,13 +49,37 @@ class AddDefaultDate extends React.Component {
                 case 11 :  
                     this.month ='Декабря';
                     break;
-    
             }
         }
+    }
+
+
+    setTime = () => {
+        this.setState({
+            time: `${new Date().getHours()} : ${new Date().getMinutes()}`
+        })
+    } 
+
+    componentDidMount() {
+            this.timer = setInterval(
+                () => this.setTime(),
+                1000
+             );    
+    }
+
+    componentWillMount() {
+        clearInterval(this.timer)
+    }
+    
+    
+
+    render() {
+       this.setMonth()
+
         return (
             <div className = 'addDefaultDate'>
                 <div className = 'currentDate'>
-                    <p>{`${this.date.getDate()} ${this.month} ${this.date.getFullYear()}`}</p>
+                    <p>{`${new Date().getDate()} ${this.month} ${new Date().getFullYear()}`}</p>
                 </div>
                 <div className = 'currentTime'>
                     <p>{this.state.time}</p>
