@@ -9,16 +9,24 @@ import './App.css';
 class App  extends React.Component {
   constructor(props) {
     super(props);
+    this.posts = [];
     this.state = {
-      value: ''
+      elem: this.posts
     }
   }
 
   addPost = (value) => {
+    this.posts.push({
+      data: 'data',
+      elem: value,
+      important: false,
+      id: 0
+    });
+
     this.setState({
-      value: value
+      elem: this.posts
     })
-    console.log(value)
+    console.log(this.state.elem)
   }
 
 
@@ -29,7 +37,7 @@ class App  extends React.Component {
             <LeftContainer/>
         </div>
         <div className='right__container'>
-            <RightContainer value={this.state.value}/>
+            <RightContainer elem={this.state.elem}/>
         </div>
         <div className='addFormContainer'>
           <AddPost addPost={this.addPost}/>

@@ -1,20 +1,21 @@
 import React from 'react';
 import RightContainerTop from '../RightContainerTop/RightContainerTop';
 import AddToDoList from '../RightContainerMiddle/RightContainerMiddle';
-import AddPost from '../../AddForm';
+import AddPost from '../RightContainerBotton/RightConstainerBottom';
 import './rightcontainer.css'
 
 const RightContainer = (props) => {
+    console.log(props.elem);
     return (
         <div  className = 'rightcontainer'>
             <div className = 'rightcontainer__top'>
                 <RightContainerTop/>
             </div>
             <div className = 'rightcontainer__middle'>
-                <AddToDoList value = {props.value}/>
+                <AddToDoList elem = {props.elem}/>
             </div>
             <div className = 'rightcontainer__bottom'>
-                {/* <AddPost/> */}
+                <AddPost elem = {props.elem} />
             </div>
         </div>
     )

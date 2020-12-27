@@ -11,7 +11,7 @@ class AddToDoList extends Component {
         return (
             <div className='rightContainerMiddle'>
                 <div className='addToDoList'>
-                    <p>{this.props.value}</p>
+                    <p></p>
                 </div>
             </div>
         )

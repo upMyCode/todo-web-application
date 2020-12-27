@@ -20,7 +20,6 @@ class AddPost extends Component {
     addPost = (e) => {
         e.preventDefault()
         this.props.addPost(this.state.value);
-        console.log(this.state.value)
     }
 
     render(){
