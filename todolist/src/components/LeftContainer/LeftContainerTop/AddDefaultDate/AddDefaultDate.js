@@ -4,10 +4,6 @@ import './addDefaultDate.css'
 class AddDefaultDate extends React.Component {
     constructor(props){
         super(props);
-        this.month = '';
-        this.state = {
-            time: `${new Date().getHours()} : ${new Date().getMinutes()}`
-        }
     }
 
     setMonth = () => {
@@ -54,24 +50,6 @@ class AddDefaultDate extends React.Component {
     }
 
 
-    setTime = () => {
-        this.setState({
-            time: `${new Date().getHours()} : ${new Date().getMinutes()}`
-        })
-    } 
-
-    componentDidMount() {
-            this.timer = setInterval(
-                () => this.setTime(),
-                1000
-             );    
-    }
-
-    componentWillMount() {
-        clearInterval(this.timer)
-    }
-    
-    
 
     render() {
        this.setMonth()
@@ -82,7 +60,7 @@ class AddDefaultDate extends React.Component {
                     <p>{`${new Date().getDate()} ${this.month} ${new Date().getFullYear()}`}</p>
                 </div>
                 <div className = 'currentTime'>
-                    <p>{this.state.time}</p>
+                    <p>{this.props.time}</p>
                 </div>
             </div>
         )

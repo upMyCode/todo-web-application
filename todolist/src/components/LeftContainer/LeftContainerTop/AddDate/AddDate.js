@@ -4,21 +4,22 @@ import AddCalendar from '../AddCalendar/AddCalendar';
 
 
 
-const AddDate = () => {
-    Date.prototype.dayS = function () {
-        return 32 - new Date(this.getFullYear(),this.getMonth(),32).getDate();
-    } 
-
-    let dateS = new Date().dayS();
+const AddDate = (props) => {
+    
     return (
         <>
             <div className='addDate'>
                 <AddDefaultDate 
+                    time={props.time}
                 />
             </div>
             <div className='addCalendar'>
                 <AddCalendar
-                   date = {dateS}/>
+                   elems={props.elems}
+                   elemOfData={props.elemOfData}
+                   getId={props.getId}
+                   
+                   />
             </div>
         </>
     )

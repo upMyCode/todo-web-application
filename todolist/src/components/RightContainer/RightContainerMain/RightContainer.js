@@ -5,7 +5,6 @@ import AddPost from '../RightContainerBotton/RightConstainerBottom';
 import './rightcontainer.css'
 
 const RightContainer = (props) => {
-    console.log(props.elem);
     return (
         <div  className = 'rightcontainer'>
             <div className = 'rightcontainer__top'>

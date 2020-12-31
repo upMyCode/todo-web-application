@@ -5,11 +5,16 @@ import AddPicture from '../LeftContainerBottom/AddPicture';
 
 
 
-const LeftContainer = () => {
+const LeftContainer = (props) => {
     return (
         <>
             <div className='addDateForLeftSide'>
-                <AddDate/>
+                <AddDate time={props.time}
+                        elems={props.elems}
+                        elemOfData={props.elemOfData}
+                        getId={props.getId}
+                
+                />
             </div>
             <div className='addPicture'>
                 <AddPicture/>
