@@ -1,0 +1,38 @@
+.addCalendar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 173px;
+}
+
+.dateElem {
+    display: flex;
+    margin: 0 26px 0 26px;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #010101;
+}
+
+.elem__number {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.blue__elem {
+    display: flex;
+    margin: 0 26px 0 26px;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #1226DA;
+}

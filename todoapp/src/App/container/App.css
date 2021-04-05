@@ -1,0 +1,16 @@
+.UI {
+    display: flex;
+    justify-content: space-between;
+    height: 828px;
+}
+.UI__RightSide {
+    width: 45.14%;
+    display: flex;
+    flex-direction: column;
+}
+
+.UI__LeftSide {
+    display: flex;
+    flex-direction: column;
+    width: 54.86%;
+}

@@ -1,0 +1,33 @@
+
+.containerDefaultDate {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerDefaultDate__Date {
+    display: flex;
+    justify-content: space-between;
+    width: 205px;
+    height: 21px;
+    margin-bottom: 30px;
+}
+.containerDefaultDate__Time {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    height: 21px;
+}
+
+.currentDate {
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.currentTime {
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}

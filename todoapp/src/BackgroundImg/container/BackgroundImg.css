@@ -1,0 +1,7 @@
+.container__BackgroundImg {
+    width: 100%;
+    height: 407px;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+}
