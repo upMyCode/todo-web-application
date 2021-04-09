@@ -6,7 +6,10 @@ import '../container/BackgroundImg.css'
 export default function AddBackgroundImg() {
     return (
         <div className='container__BackgroundImg'>
-            <img src={planeImg}/>
+            <img 
+                src={planeImg}
+                alt='plane'
+             />
         </div>
     )
 }
