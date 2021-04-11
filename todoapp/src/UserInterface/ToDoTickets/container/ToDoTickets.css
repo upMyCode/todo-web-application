@@ -1,14 +1,47 @@
 .container__ToDoTickets {
     display: flex;
-    justify-content: center;
+    align-items: flex-start;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
     height: 580px;
 }
 
 .ToDoTickets__Ticket {
-    width: 328px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Ticket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
     height: 110px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-color: #121ADA;
     border-radius: 20px;
+}
+
+.ToDoTickets__CheckPoint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 110px;
+}
+
+.CheckPoint {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.elem {
+    display: block;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color:#fff;
 }

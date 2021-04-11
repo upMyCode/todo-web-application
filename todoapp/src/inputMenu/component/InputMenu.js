@@ -1,4 +1,4 @@
-import React,{useState,useContext} from 'react'
+import React,{useState, useContext, useEffect} from 'react'
 import '../container/InputMenu.css'
 import button from '../container/button.png'
 import {Context} from '../../App/container/context'
@@ -13,26 +13,29 @@ function getValue(e) {
 }
 
 function addValue() {
-    ticketsList.push(value)
-    setTicketsList(ticketsList)
+    setTicketsList(prev => [...prev, value]) 
+    console.log(ticketsList)    
 }
+
     return (
-            <div className='container__InputMenu'>
+            <form className='container__InputMenu'>
                 <div className='container__InputMenu-button'>
-                    <a className='addForm' onClick={addValue}>
+                    <a  
+                        className='addForm' 
+                        onClick={addValue}>
                         <img 
                             src={button}
                             alt='plus'
                         />
                     </a>
                 </div>
-                <div className='container__InputMenu-button-form'>
+                <div className='container__InputMenu-form'>
                     <input 
                         type='text' 
                         placeholder='Type the simple text here' 
                         onChange={getValue}
                     />
                 </div>
-            </div>
+            </form>
     )
 }

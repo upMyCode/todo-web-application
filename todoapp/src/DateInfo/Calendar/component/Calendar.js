@@ -24,7 +24,14 @@ export default function AddCalendar({days}) {
             {   
               days.map((elem, index) => {
                   return(
-                     <div className ='dateElem' key={index} onClick={switchColor}><span className='elem__number'>{elem}</span></div>
+                     <div 
+                        className='dateElem'
+                        key={index}
+                        onClick={switchColor}>
+                            <span className='elem__number'>
+                                {elem}
+                            </span>
+                    </div>
                   )
               })      
             } 
