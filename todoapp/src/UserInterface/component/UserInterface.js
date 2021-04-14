@@ -5,7 +5,7 @@ import AddList from '../List/component/List'
 import AddToDoTickets from '../ToDoTickets/component/ToDoTickets'
 
 /*****Add interface for TODO messages*****/
-export default function AddUserInterface({userText,ticketsList}) {
+export default function AddUserInterface({userText, ticketsList, defaultDate, defaultMonth, hours, minutes, setTicketsList}) {
     return (
         <div className='container__UserInterface'>
             <div className='userInterface__UserInfo'>
@@ -18,6 +18,11 @@ export default function AddUserInterface({userText,ticketsList}) {
                 <AddToDoTickets 
                     userText={userText}
                     ticketsList={ticketsList}
+                    defaultDate={defaultDate}
+                    defaultMonth={defaultMonth}
+                    setTicketsList={setTicketsList}
+                    hours={hours} 
+                    minutes={minutes} 
                 />
             </div>
         </div>

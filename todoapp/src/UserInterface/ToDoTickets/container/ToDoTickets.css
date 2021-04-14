@@ -14,8 +14,7 @@
 
 .Ticket {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     width: 60%;
     height: 110px;
     margin-top: 10px;
@@ -42,6 +41,52 @@
 .elem {
     display: block;
     font-size: 20px;
+    margin-left: 20px;
     font-family: 'Roboto', sans-serif;
     color:#fff;
+}
+
+.defaultDate {
+    margin-left: 20px;
+    font-style: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.Ticket__item-1{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.Ticket__item-2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.Ticket__item-2-img {
+    width: 30px;
+    height: 30px;
+}
+.item-2 {
+    cursor: pointer;
+    position: relative;
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+}
+.item-2::before, .item-2::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 2px;
+    background-color:#000;
+    /* transform: rotate(35deg); */
+}
+
+.item-2::before {
+    transform: rotate(45deg);
+}
+.item-2::after {
+    transform: rotate(-45deg);
 }

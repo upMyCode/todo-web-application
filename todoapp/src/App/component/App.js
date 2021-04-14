@@ -42,6 +42,11 @@ export default function App()  {
                         <AddUserInterface
                             userText={value}
                             ticketsList={ticketsList}
+                            setTicketsList={setTicketsList}
+                            defaultDate={date}
+                            defaultMonth={month}
+                            hours={hours} 
+                            minutes={minutes} 
                         />
                     </div>
                 </div>

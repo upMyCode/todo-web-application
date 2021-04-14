@@ -3,7 +3,7 @@ import AddDate from '../Date/component/Date'
 import AddCalendar from '../Calendar/component/Calendar'
 import '../container/DateInfo.css'
 
-export default function DateInfo({year, month, date, hours,minutes,days}) {
+export default function DateInfo({year, month, date, hours, minutes, days}) {
     return (
         <>  
             <div className='container_Date'>
