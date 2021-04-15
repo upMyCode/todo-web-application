@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React,{useContext, useEffect} from 'react'
 import '../container/ToDoTickets.css'
 import {getMonthName} from '../../../DateInfo/Date/container/DateComponentLogic'
 import  pancel from '../container/pancel.png'
@@ -6,9 +6,17 @@ import {Context} from '../../../App/container/context'
 
 
 export default function AddToDoTickets({userText,ticketsList, defaultDate, defaultMonth, minutes, hours, setTicketsList}) {
+    
+        useEffect(()=>{
+            setTicketsList((prev)=> {
+                const a = prev;
+                a.splice(4, a.length -4);
+                return [...a]
+            })
+        },[ticketsList])
 
-    if(ticketsList.length > 0 && ticketsList.length < 5) {
         let month = getMonthName()
+
         function removeTickets(e) {   
             setTicketsList(prev => {
                 const a = prev;
@@ -18,6 +26,7 @@ export default function AddToDoTickets({userText,ticketsList, defaultDate, defau
         }
 
         console.log(ticketsList)
+        
         return (
             <div className='container__ToDoTickets'>
                 
@@ -57,11 +66,5 @@ export default function AddToDoTickets({userText,ticketsList, defaultDate, defau
                 })
              }
             </div>
-        )
-    } else {
-        return (
-            <div className='container__ToDoTickets'></div>
-        )
-    }
-    
+        )  
 }

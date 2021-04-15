@@ -12,13 +12,14 @@ function getValue(e) {
     setValue(e.target.value)
 }
 
-function addValue() {
+function addValue(e) {
+    e.preventDefault()
     setTicketsList(prev => [...prev, value]) 
     console.log(ticketsList)    
 }
 
     return (
-            <form className='container__InputMenu'>
+            <form className='container__InputMenu' onSubmit={addValue}>
                 <div className='container__InputMenu-button'>
                     <a  
                         className='addForm' 
