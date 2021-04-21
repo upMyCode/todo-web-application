@@ -23,6 +23,17 @@
     border-radius: 20px;
 }
 
+.Ticket__importent {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    height: 110px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #EEEEEE;
+    border-radius: 20px;
+}
+
 .ToDoTickets__CheckPoint {
     display: flex;
     align-items: center;
@@ -31,11 +42,22 @@
     height: 110px;
 }
 
-.CheckPoint {
+.CheckPoint__unimportent {
+    display: block;
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    cursor: pointer;
     background-color: #fff;
+}
+
+.CheckPoint__importent {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #1226DA;
 }
 
 .elem {
@@ -44,6 +66,14 @@
     margin-left: 20px;
     font-family: 'Roboto', sans-serif;
     color:#fff;
+}
+
+.elem__importent {
+    display: block;
+    font-size: 20px;
+    margin-left: 20px;
+    font-family: 'Roboto', sans-serif;
+    color:#000;
 }
 
 .defaultDate {
