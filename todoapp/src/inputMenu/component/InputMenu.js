@@ -13,10 +13,20 @@ function getValue(e) {
 }
 
 function addValue(e) {
-    e.preventDefault()
-    setTicketsList(prev => [...prev, value]) 
-    console.log(ticketsList)    
-}
+    e.preventDefault();
+    setTicketsList((prev) => {
+        return (
+            [
+                ...prev ,
+                {
+                    text: value,
+                    classNameTicket: 'Ticket',
+                    classNameText: 'elem'
+                } 
+            ]
+        )        
+    })
+} 
 
     return (
             <form className='container__InputMenu' onSubmit={addValue}>

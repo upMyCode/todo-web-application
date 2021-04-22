@@ -9,9 +9,10 @@ export default function AddToDoTickets({userText, ticketsList, defaultDate, defa
     
         const [ticketColor, setTicketColor] = useState(false);
         const [idElem, setIdElem] = useState(0)
-
+        
+         
         useEffect(() => {
-            if (ticketsList.length >= 5) {
+            if (ticketsList.length > 4) {
                 setTicketsList((prev) => {
                     const a = prev;
                     a.splice(4, a.length - 4);
@@ -36,13 +37,17 @@ export default function AddToDoTickets({userText, ticketsList, defaultDate, defa
                 e.target.className = 'CheckPoint__importent';
                 setTicketColor(true);
                 setIdElem(e.target.id);
-                console.log(idElem);
+                ticketsList[e.target.id].classNameTicket = 'Ticket__importent';
+                ticketsList[e.target.id].classNameText = 'elem__importent';
+                
             } else {
                 e.target.className = 'CheckPoint__unimportent';
+                ticketsList[e.target.id].classNameTicket = 'Ticket';
+                ticketsList[e.target.id].classNameText = 'elem';
                 setTicketColor(false);
             }
         }
-
+        console.log(ticketsList)
         return (
 
             <div className='container__ToDoTickets'>
@@ -58,10 +63,10 @@ export default function AddToDoTickets({userText, ticketsList, defaultDate, defa
 
                                 </a>
                             </div>
-                            <div className={ticketColor == true ? 'Ticket__importent' : 'Ticket'} id={id}>
+                            <div className={elem.classNameTicket} id={id}>
                                 <div className='Ticket__item-1'>
                                     <>
-                                        <p className={ticketColor == true  ? 'elem__importent' : 'elem'} id={id}>{elem}</p>
+                                        <p className={elem.classNameText} id={elem.id}>{elem.text}</p>
                                     </>
                                     <>
                                         <span className = 'defaultDate'>{`${defaultDate} ${month}    ${hours} : ${minutes}`}</span>
