@@ -1,4 +1,3 @@
-
 const firebaseConfig = {
     apiKey: "AIzaSyBCjHsnDLqj07wfwCXsXIn2y8HbYybsMlU",
     authDomain: "todo-2e64b.firebaseapp.com",

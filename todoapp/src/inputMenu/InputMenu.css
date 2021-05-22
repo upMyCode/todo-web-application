@@ -1,0 +1,35 @@
+.container__InputMenu {
+    height: 180px;
+    max-width: 900px;
+    display: flex;
+    margin: 0px auto; 
+}
+
+.container__InputMenu > input {
+    width: 600px;
+    max-width: 950px;
+    height: 100px;
+    border-radius: 1.25rem;
+    background-color: #090909;
+}
+
+.container__InputMenu > button {
+    cursor: pointer;
+    width: 4.75rem;
+    height: 4.75rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #090909;
+    outline-width: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+} 
+
+INPUT { 
+    background-color: #090909;
+    font-size: 1.9rem;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+}
