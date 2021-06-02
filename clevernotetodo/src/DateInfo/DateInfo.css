@@ -1,0 +1,9 @@
+.container_Date {
+    display: flex;
+    max-width: 700px;
+    justify-content: flex-end;
+}
+
+.container__Calendar {
+    margin-top: 50px;
+}

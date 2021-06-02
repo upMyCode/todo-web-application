@@ -1,0 +1,40 @@
+.container__InputMenu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__InputMenu > input {
+    height: 100px;
+    width: 50%;
+    text-align: left;
+    font-size: 1.9rem;
+    border-radius: 1.25rem;
+    background-color: #090909;
+}
+
+.container__InputMenu > button {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #090909;
+    outline-width: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+} 
+
+.container__InputMenu > button > img {
+    object-fit: contain;
+    width: 60%;
+}
+
+INPUT { 
+    background-color: #090909;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+}
